@@ -1,0 +1,169 @@
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+.htaccess
+
+# wp core (as of 3.4.1)
+/db-config.php
+/index.php
+/license.txt
+/readme.html
+/wp-activate.php
+/wp-app.php
+/wp-atom.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-commentsrss2.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-feed.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-rdf.php
+/wp-rss.php
+/wp-rss2.php
+/wp-pass.php
+/wp-register.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+/wp-admin
+/wp-includes
+/wp-content/index.php
+/wp-content/themes/twentyten
+/wp-content/themes/twentyeleven
+/wp-content/themes/twentytwelve
+/wp-content/themes/twentythirteen
+/wp-content/themes/twentyfourteen
+/wp-content/themes/twentyfifteen
+/wp-content/themes/index.php
+/wp-content/plugins/index.php
+/wp-content/plugins/hello.php
+
+# large/disallowed file types
+# a CDN should be used for these
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi
+
+###
+# Additions for WP Engine
+###
+.smushit-status
+.gitattributes
+_wpeprivate
+/wp-content/advanced-cache.php
+/wp-content/object-cache.php
+/wp-content/mu-plugins/mu-plugin.php
+/wp-content/mu-plugins/force-strong-passwords
+/wp-content/mu-plugins/slt-force-strong-passwords.php
+/wp-content/mu-plugins/limit-login-attempts
+/wp-content/mu-plugins/wpengine-common
+/wp-content/mysql.sql
+
+###
+# Additions for Page.ly
+###
+#mu-plugins/pagely_management.php
+
+####
+# Additions Local
+######
+.DS_Store
+/wp-config-local.php
+/*.sublime-project
+/*.sublime-workspace
+/vvv*
+/wp-content/mu-plugins/9s-vagrant-cron-filter.php
+
+####
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map
+
+# Package Managed (Composer/Bower/NPM) #
+# Composer #
+library/vendors/composer/
+!assets/js/vendor/
+wpcs/
+composer.lock
+# Bower #
+assets/bower_components/*
+# NPM #
+node_modules
+# Codekit #
+/codekit-config.json
+*.codekit
+**.codekit-cache/*
+
+###
+# Additions for WPE, requried for git push to WPE
+######
+# wordpress specific
+/wp-config.php
+/wp-content/uploads/
+/wp-content/blogs.dir/
+/wp-content/upgrade/*
+/wp-content/backup-db/*
+/wp-content/wp-cache-config.php
+/wp-content/cache/*
+/wp-content/cache/supercache/*
+
+###
+# Additions Common/Development Plugins
+######
+#/wp-content/plugins/debug-bar*
+#/wp-content/plugins/developer
+#/wp-content/plugins/rewrite-rules-inspector
+#/wp-content/plugins/genesis-visual-hook-guide
+#wp-content/plugins/serverbuddy-by-pluginbuddy
+#/wp-content/plugins/what-template-file-am-i-viewing
+#/wp-content/plugins/wordpress-importer
+
+###
+# Site Specific ignores
+######
+#/assets
+.idea
+/ssl
+
+
+
