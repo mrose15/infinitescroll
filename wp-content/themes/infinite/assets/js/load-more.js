@@ -1,6 +1,6 @@
 jQuery(function($){
 	$( document ).ready( function() {
-		$('.site-main').append( '<span class="load-more"></span>' );
+		$('.site-main').append( '<span class="load-more">Loading more posts...</span>' );
 		var button = $('.site-main .load-more');
 		var page = 2;
 		var loading = false;

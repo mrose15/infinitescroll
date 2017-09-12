@@ -16,25 +16,18 @@ function be_post_summary(){
 
 /**
  * AJAX Load More
- * @link http://www.billerickson.net/infinite-scroll-in-wordpress
+ * 
  */
 function be_ajax_load_more() {
-    check_ajax_referer( 'be-load-more-nonce', 'nonce' );
-
     $args = isset( $_POST['query'] ) ? array_map( 'esc_attr', $_POST['query'] ) : array();
     $args['post_type'] = isset( $args['post_type'] ) ? esc_attr( $args['post_type'] ) : 'post';
     $args['paged'] = esc_attr( $_POST['page'] );
     $args['post_status'] = 'publish';
-
     ob_start();
     $loop = new WP_Query( $args );
-    if( $loop->have_posts() ): 
-        while( $loop->have_posts() ): $loop->the_post();
-            be_post_summary();
-        endwhile; 
-    endif; 
-    wp_reset_postdata();
-  
+    if( $loop->have_posts() ): while( $loop->have_posts() ): $loop->the_post();
+        be_post_summary();
+    endwhile; endif; wp_reset_postdata();
     $data = ob_get_clean();
     wp_send_json_success( $data );
     wp_die();
@@ -53,7 +46,7 @@ function be_load_more_js() {
         'query' => $wp_query->query,
     );
             
-    wp_enqueue_script( 'be-load-more', get_stylesheet_directory_uri() . '/assets/js/loadmore.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'be-load-more', get_stylesheet_directory_uri() . '/assets/js/load-more.js', array( 'jquery' ), '1.0', true );
     wp_localize_script( 'be-load-more', 'beloadmore', $args );
     
 }
