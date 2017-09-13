@@ -4,6 +4,15 @@ add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 function enqueue_parent_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
+    
+add_filter("the_content", "filter_content");
+
+function filter_content($content){
+    if (!is_single()){
+        // Take the existing content and return a subset of it
+        return substr($content, 0, 300);
+    }
+}
 
 
 /***************** Scroll to load more *****************/
@@ -11,7 +20,7 @@ function enqueue_parent_styles() {
 /* Layout for infinite scroll */
 
 function be_post_summary(){
-    the_title( '<h2 class="entry-title">', '</h2>' );
+    get_template_part( 'template-parts/post/content', get_post_format() );
 }
 
 /**

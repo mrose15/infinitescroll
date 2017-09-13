@@ -1,27 +1,15 @@
 jQuery(function($){
 	$( document ).ready( function() {
-		$('.site-main').append( '<span class="load-more">Loading more posts...</span>' );
+		$('.site-main').append( '<span class="load-more" style="cursor: pointer; background-color: #000; color: #fff;">Click to load more posts...</span>' );
 		var button = $('.site-main .load-more');
 		var page = 2;
 		var loading = false;
-		var scrollHandling = {
-		    allow: true,
-		    reallow: function() {
-		        scrollHandling.allow = true;
-		    },
-		    delay: 400 //(milliseconds) adjust to the highest acceptable value
-		};
 
-		$(window).scroll(function(){
-			if( ! loading && scrollHandling.allow ) {
-				scrollHandling.allow = false;
-				setTimeout(scrollHandling.reallow, scrollHandling.delay);
-				var offset = $(button).offset().top - $(window).scrollTop();
-				if( 2000 > offset ) {
+		$('body').on('click', '.load-more', function(){
+			if( ! loading ) {
 					loading = true;
 					var data = {
 						action: 'be_ajax_load_more',
-						nonce: beloadmore.nonce,
 						page: page,
 						query: beloadmore.query,
 					};
@@ -37,8 +25,6 @@ jQuery(function($){
 					}).fail(function(xhr, textStatus, e) {
 						 console.log(xhr.responseText);
 					});
-
-				}
 			}
 		});
 	});	
