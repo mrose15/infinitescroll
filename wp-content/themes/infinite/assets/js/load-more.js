@@ -1,6 +1,6 @@
 jQuery(function($){
 	$( document ).ready( function() {
-		$('.site-main').append( '<span class="load-more" style="cursor: pointer; background-color: #000; color: #fff;">Click to load more posts...</span>' );
+		$('.home .site-main').append( '<button class="load-more btn">Click to load more</button>' );
 		var button = $('.site-main .load-more');
 		var page = 2;
 		var loading = false;

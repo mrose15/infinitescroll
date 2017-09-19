@@ -7,3 +7,21 @@
  Version: 1.1.2
  Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
  */
+
+.btn{
+	text-align: center;
+	background-color: #1b95e0;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	color: #fff;
+	transition: all .2s ease-in-out;
+	font-size: .8rem;
+	border-radius: 5px;
+	font-weight: 400;
+	margin: 0 auto;
+}
+
+.btn:hover{
+	background-color: #0089c9;
+	transform: scale(1.1);
+}

@@ -5,15 +5,6 @@ function enqueue_parent_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
     
-add_filter("the_content", "filter_content");
-
-function filter_content($content){
-    if (!is_single()){
-        // Take the existing content and return a subset of it
-        return substr($content, 0, 300);
-    }
-}
-
 
 /***************** Scroll to load more *****************/
 
