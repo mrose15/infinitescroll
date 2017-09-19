@@ -1,54 +1,122 @@
-*~
+# NOTE:     Theme folder uses its own .gitignore which typically ignores...
+#
+#           # Files & folders generated in dev environment
+#           node_modules
+#           bower_components
+#           dist
+#           npm-debug.log
+#
+#           # Files & folders generated from text editors
+#           .idea
+#           .netbeans.xml
+#
+#           # Extraneous files & folders from Sage
+$           ruleset.xml
+#           *.md
+#           !LICENSE.md
+#           !CHANGELOG.md
+#
+#           # Large/disallowed file types
+#           *.hqx
+#           *.bin
+#           *.exe
+#           *.dll
+#           *.deb
+#           *.dmg
+#           *.iso
+#           *.img
+#           *.msi
+#           *.msp
+#           *.msm
+#           *.mid
+#           *.midi
+#           *.kar
+#           *.mp3
+#           *.ogg
+#           *.m4a
+#           *.ra
+#           *.3gpp
+#           *.3gp
+#           *.mp4
+#           *.mpeg
+#           *.mpg
+#           *.mov
+#           *.webm
+#           *.flv
+#           *.m4v
+#           *.mng
+#           *.asx
+#           *.asf
+#           *.wmv
+#           *.avi
+#
+#           Any other files and folders that fall in one of the categories above
+#           should be added where appropriate.
+
+
+# Everything in root
+/*
+
+# Exceptions in root
+!/.gitignore
+!/README.md
+!/robots.txt
+
+# Exceptions in wp-content
+!/wp-content
+/wp-content/*
+!/wp-content/plugins
+!/wp-content/themes
+/wp-content/plugins/*
+/wp-content/themes/*
+
+
+# Themes
+!/wp-content/themes/infinite/
+
+# Favicon files
+!/apple-touch-icon.png
+!/favicon.ico
+!/favicon-*.*
+!/manifest.json
+!/mstile-150x150.png
+!/browserconfig.xml
+!/safari-pinned-tab.svg
+
+
+# ======================================================================
+# Any other files and folders that fall in one of the categories below
+# should be added where appropriate.
+# ======================================================================
+
+
+# Files and folders specific to developer's environment. Files and
+# folders that are specific to developer's environment need not be
+# tracked as they can change based on preference.
+# ----------------------------------------------------------------------
+*.orig
+node_modules
+bower_components
+dist
+npm-debug.log
+ruleset.xml
+.editorconfig
+.jscsrc
+.jshintrc
+.idea
+.netbeans.xml
 .DS_Store
-.svn
-.cvs
-*.bak
-*.swp
-Thumbs.db
-.htaccess
 
-# wp core (as of 3.4.1)
-/db-config.php
-/index.php
-/license.txt
-/readme.html
-/wp-activate.php
-/wp-app.php
-/wp-atom.php
-/wp-blog-header.php
-/wp-comments-post.php
-/wp-commentsrss2.php
-/wp-config-sample.php
-/wp-cron.php
-/wp-feed.php
-/wp-links-opml.php
-/wp-load.php
-/wp-login.php
-/wp-mail.php
-/wp-rdf.php
-/wp-rss.php
-/wp-rss2.php
-/wp-pass.php
-/wp-register.php
-/wp-settings.php
-/wp-signup.php
-/wp-trackback.php
-/xmlrpc.php
-/wp-admin
-/wp-includes
-/wp-content/index.php
-/wp-content/themes/twentyten
-/wp-content/themes/twentyeleven
-/wp-content/themes/twentytwelve
-/wp-content/themes/twentythirteen
-/wp-content/themes/twentyfourteen
-/wp-content/themes/twentyfifteen
-/wp-content/themes/index.php
-/wp-content/plugins/index.php
-/wp-content/plugins/hello.php
 
-# large/disallowed file types
-# a CDN should be used for these
+# Extraneous files & folders from Sage
+# ----------------------------------------------------------------------
+*.md
+!LICENSE.md
+!CHANGELOG.md
+
+
+# Large/disallowed file types. A CDN should be used for these.
+# ----------------------------------------------------------------------
 *.hqx
 *.bin
 *.exe
@@ -81,76 +149,4 @@ Thumbs.db
 *.asf
 *.wmv
 *.avi
-
-
-####
-# Additions Local
-######
-.DS_Store
-/wp-config-local.php
-/*.sublime-project
-/*.sublime-workspace
-/vvv*
-
-
-####
-# SASS #
-##########
-**/.sass-cache
-**/.sass-cache/*
-**/.map
-
-# Package Managed (Composer/Bower/NPM) #
-# Composer #
-library/vendors/composer/
-!assets/js/vendor/
-wpcs/
-composer.lock
-# Bower #
-assets/bower_components/*
-# NPM #
-node_modules
-# Codekit #
-/codekit-config.json
-*.codekit
-**.codekit-cache/*
-
-###
-# Additions for WPE, requried for git push to WPE
-######
-# wordpress specific
-/*
-/wp-config.php
-/wp-content/plugins
-/wp-content/uploads/
-/wp-content/blogs.dir/
-/wp-content/upgrade/*
-/wp-content/backup-db/*
-/wp-content/wp-cache-config.php
-/wp-content/cache/*
-/wp-content/cache/supercache/*
-/wp-content/themes/twentysixteen
-
-
-
-
-###
-# Additions Common/Development Plugins
-######
-#/wp-content/plugins/debug-bar*
-#/wp-content/plugins/developer
-#/wp-content/plugins/rewrite-rules-inspector
-#/wp-content/plugins/genesis-visual-hook-guide
-#wp-content/plugins/serverbuddy-by-pluginbuddy
-#/wp-content/plugins/what-template-file-am-i-viewing
-#/wp-content/plugins/wordpress-importer
-
-###
-# Site Specific ignores
-######
-#/assets
-.idea
-/ssl
-
-
-
+*.psd
